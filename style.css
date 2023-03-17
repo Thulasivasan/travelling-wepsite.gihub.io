@@ -13,7 +13,6 @@
     --fw-medium: 500;
     --fw-semi-bold: 600;
     
-    
   }
   
   /* Box sizing rules */
@@ -203,7 +202,7 @@ svg{
   }
   .primary-navigation{
     position: relative;
-    width: 80%;
+    width: 90%;
     align-items: center;
     margin: 0 auto;
     z-index: 50;
@@ -214,16 +213,16 @@ svg{
   .primary-left-ul{
     flex-direction: column;
     position: absolute;
-    width: 80%;
+    width: 90%;
     order: 5;
-    top: 120%;
-    left: 10%;
-    border-radius: 2rem;
+    top: 150%;
+    left: 5%;
+    border-radius: .5rem;
     scale: 1 0;
     background: var(--clr-white);
+    padding: 8vh 0;
     transform-origin: top;
-    opacity: 0;
-    rotate: -180deg;
+    box-shadow: 0 0 10px var(--clr-white);
     transition: all 400ms ease-in-out 300ms;
   }
   .primary-left-ul a{
@@ -231,24 +230,23 @@ svg{
     font-weight: var(--fw-medium);
   }
   .primary-left-ul li{
-    transform-origin: left;
     opacity: 0;
-    transform: translateX(-100%);
-    transition: all 300ms linear;  
+    padding: .58em 0;
+    font-size: 1.5rem;
+    transform-origin: left;
+    transition: opacity 300ms;  
   }
   .contact-button a{
     color: var(--clr-white);
+    padding: 0 .5em;
   }
   #check:checked ~ .primary-left-ul{
     scale: 1;
-    opacity: 1;
-    rotate:0deg;
     transition: all 400ms ease-in-out;
   }
   #check:checked ~ .primary-left-ul li{
     opacity: 1;
-    transform: translateX(0);
-    transition: all 300ms linear 400ms;  
+    transition: opacity 300ms ease-in-out 400ms ; 
   }
 }
 
@@ -269,7 +267,6 @@ svg{
   background-repeat: no-repeat;
 }
 .secondary-header{
-  /* background: rgba(0, 0, 0, .5); */
   padding-top: 3rem;
 }
 .secondary-header a{
@@ -280,8 +277,6 @@ svg{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* outline: 1px solid red; */
-  /* flex-wrap: wrap; */
 }
 .secondary-left-ul,
 .secondary-right-ul{
@@ -291,7 +286,6 @@ svg{
   justify-content: space-between;
   align-items: center;
   gap: clamp(.5rem, 1vw + 1rem, 4rem);
-  /* outline: 1px solid red; */
   height: max-content;
   
 }
@@ -308,10 +302,8 @@ svg{
   font-weight: var(--fw-regular);
   width: 100%;
   max-width: 40ch;
-  /* font-size: 1.2rem; */
   font-size: clamp(16px , 1.1vw, 22px);
   color: var(--clr-gray);
-  /* justify-self: end; */
   margin: 0 auto;
 }
 
@@ -364,6 +356,7 @@ svg{
   .secondary-header{
     padding: 0;
   }
+
   .secondary-left-ul{
     text-align: center;
     gap: 0;
@@ -377,16 +370,13 @@ svg{
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 0 auto;
-  /* gap: 2.5rem; */
   
-  /* outline: 1px solid; */
 }
 .card{
   position: relative;
   --card-width: 18rem;
   width: var(--card-width);
   border-radius: 3.5rem;
-  /* outline: 1px solid red; */
   margin: 0 auto;
   transition: transform 300ms ease-in-out 100ms;
 }
@@ -432,20 +422,20 @@ svg{
   transition: opacity 300ms ease-in-out 300ms;
 }
 @media only screen and (max-width: 670px){
+  
   .card-container{
     padding-top: 3rem;
     gap: 3rem;
     width: 80%;
   }
   .card{ 
-    width: 80%;
+    width: 55vw;
     justify-content: space-between;
     gap: 1rem;
-    transform: translateX(-.5rem);
     transition: all 300ms ease-in-out;
   }
   .card-image{
-    width: 80%;
+    width: 50vw;
     margin: 0 auto;
     transition: all 300ms ease-in-out 300ms;
   }
@@ -454,7 +444,7 @@ svg{
     opacity: 0;
     text-align: left;
     align-self: center;
-    line-height: 2rem;
+    line-height: 1.5rem;
     transition: all 0ms ease-in-out;
   }
   .card:hover{
@@ -464,11 +454,10 @@ svg{
   .card:hover .card-text{
     position: relative;
     opacity: 1;
-    transform: translateX(2rem);
     transition: all 300ms ease-in-out 100ms;
   }
   .card:hover .card-image{
-    transform: translateX(2rem);
+    transform: translateX(-2rem);
     width: 110%;
     transition: all 300ms ease-in-out 200ms;
   }
