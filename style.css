@@ -73,12 +73,11 @@ svg{
   background-size: cover;
   background-repeat: no-repeat;
 }
-.mobile-hamburger-toggle{
+#check{
   display: none;
-  color: var(--clr-white);
 }
-#toggle{
-  opacity: 1;
+.hamburger{
+  display: none;
 }
 .primary-header{
   background: transparent;
@@ -198,9 +197,6 @@ svg{
   }
 }
 @media only screen and (max-width: 550px){
-  #check{
-    display: none;
-  }
   .hamburger{
     display: block;
     color: var(--clr-white);
